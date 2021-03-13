@@ -1,0 +1,22 @@
+//https://www.urionlinejudge.com.br/judge/pt/profile/347554
+#include <stdio.h>
+
+int main() {
+    int np;
+    int mult = 10;
+    int paginas = 0;
+    int i;
+    int aumenta = 1;
+
+    scanf("%d", &np);
+
+    for(i=1;i<=np;i++){
+        if(i == mult){
+            aumenta++;
+            mult = mult*10;
+        }
+        paginas += aumenta;
+    }
+    printf("%d\n",paginas);
+    return 0;
+}
