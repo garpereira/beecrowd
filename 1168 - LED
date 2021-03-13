@@ -1,0 +1,51 @@
+//https://www.urionlinejudge.com.br/judge/pt/profile/347554
+#include <stdio.h>
+#include <string.h>
+#define MAX 100000
+
+int main(){
+    char numeros[MAX];
+    int i=0, j;
+    int ntest, soma;
+    scanf("%d", &ntest);
+
+    while(i!=ntest){
+        scanf("%s", numeros);
+        soma=0;
+        for(j=0;numeros[j] !='\0';j++){
+            if(numeros[j] == '0'){
+                soma += 6;
+            }
+            else if(numeros[j] == '1'){
+                soma += 2;
+            }
+            else if(numeros[j] == '2'){
+                soma += 5;
+            }
+            else if(numeros[j] == '3'){
+                soma += 5;
+            }
+            else if(numeros[j] == '4'){
+                soma += 4;
+            }
+            else if(numeros[j] == '5'){
+                soma += 5;
+            }
+            else if(numeros[j] == '6'){
+                soma += 6;
+            }
+            else if(numeros[j] == '7'){
+                soma += 3;
+            }
+            else if(numeros[j] == '8'){
+                soma += 7;
+            }
+            else if(numeros[j] == '9'){
+                soma += 6;
+            }
+        }
+        printf("%d leds\n", soma);
+        i++;
+    }
+    return 0;
+}
