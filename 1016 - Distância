@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+main (void){
+    int n, x=60, y=90, uma_hora=60, kmh, minutos;
+    scanf("%d", &n);
+    kmh= y-x;
+    kmh= uma_hora/kmh;
+    minutos = n*kmh;
+    printf("%d minutos\n", minutos);
+}
