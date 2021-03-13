@@ -1,0 +1,42 @@
+//https://www.urionlinejudge.com.br/judge/pt/profile/347554
+#include <stdio.h>
+#include <math.h>
+main (void){
+    float
+        N=0;
+    int
+        nota_100=0.00,
+        nota_50=0.00,
+        nota_20=0.00,
+        nota_10=0.00,
+        nota_5=0.00,
+        nota_2=0.00;
+    int
+        moeda_1=0.00,
+        moeda_50=0.00,
+        moeda_25=0.00,
+        moeda_10=0.00,
+        moeda_5=0.00;
+    double
+        moeda_01=0.00;
+        
+    scanf("%f", &N);
+    if( N >= 0.00 || N<=1000000.00){
+        nota_100=(N/100);
+        nota_50=(fmod(N,100))/50;
+        nota_20=((fmod(N,100)) - (50*nota_50))/20;
+        nota_10=((fmod(N,100)) - (50*nota_50) - (20*nota_20))/10;
+        nota_5=((fmod(N,100)) - (50*nota_50) - (20*nota_20) -(10*nota_10))/5;
+        nota_2=((fmod(N,100)) - (50*nota_50) - (20*nota_20) - (10*nota_10) - (5*nota_5))/2;
+        /* MOEDAS */
+        moeda_1=((fmod(N,100)) - (50*nota_50) - (20*nota_20) - (10*nota_10) - (5*nota_5) - (2*nota_2))/1;
+        moeda_50=((fmod(N,100)) - (50*nota_50) - (20*nota_20) - (10*nota_10) - (5*nota_5) - (2*nota_2) - (1*moeda_1))/0.50;
+        moeda_25=((fmod(N,100)) - (50*nota_50) - (20*nota_20) - (10*nota_10) - (5*nota_5) - (2*nota_2) - (1*moeda_1) - (0.50*moeda_50))/0.25;
+        moeda_10=((fmod(N,100)) - (50*nota_50) - (20*nota_20) - (10*nota_10) - (5*nota_5) - (2*nota_2) - (1*moeda_1) - (0.50*moeda_50) - (0.25*moeda_25))/0.10;
+        moeda_5=((fmod(N,100)) - (50*nota_50) - (20*nota_20) - (10*nota_10) - (5*nota_5) - (2*nota_2) - (1*moeda_1) - (0.50*moeda_50) - (0.25*moeda_25) - (0.10*moeda_10))/0.05;
+        moeda_01=((fmod(N,100)) - (50*nota_50) - (20*nota_20) - (10*nota_10) - (5*nota_5) - (2*nota_2) - (1*moeda_1) - (0.50*moeda_50) - (0.25*moeda_25) - (0.10*moeda_10) - (0.05*moeda_5))/0.01;
+        
+        printf("NOTAS:\n%d nota(s) de R$ 100.00\n%d nota(s) de R$ 50.00\n%d nota(s) de R$ 20.00\n%d nota(s) de R$ 10.00\n%d nota(s) de R$ 5.00\n%d nota(s) de R$ 2.00\nMOEDAS:\n%d moeda(s) de R$ 1.00\n%d moeda(s) de R$ 0.50\n%d moeda(s) de R$ 0.25\n%d moeda(s) de R$ 0.10\n%d moeda(s) de R$ 0.05\n%.0lf moeda(s) de R$ 0.01\n", nota_100, nota_50, nota_20, nota_10, nota_5, nota_2, moeda_1, moeda_50, moeda_25, moeda_10, moeda_5, moeda_01);
+        
+    }
+}
