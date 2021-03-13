@@ -1,0 +1,14 @@
+//https://www.urionlinejudge.com.br/judge/pt/profile/347554
+#include <stdio.h>
+main (void){
+    
+    int n, maior=0, i, contador=0;
+    for(i=0; i<100;i++){
+        scanf("%d", &n);
+        if (n > maior){
+            maior = n;
+            contador = i+1;
+        }
+    }
+        printf("%d\n%d\n",maior, contador);
+}
