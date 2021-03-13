@@ -1,0 +1,21 @@
+//https://www.urionlinejudge.com.br/judge/pt/profile/347554
+#include <stdio.h>
+main (void){
+    
+    int x, y=0, impar=0;
+    scanf("%d", &x);
+        impar = x;
+    while (y < 6){
+         impar++;
+        if (impar%2 != 0){
+            printf("%d\n", impar);
+            impar++;
+            y++;
+        }
+        else if(x%2 !=0){
+            printf("%d\n", x);
+            x++;
+            y++;
+        }
+    }
+}
