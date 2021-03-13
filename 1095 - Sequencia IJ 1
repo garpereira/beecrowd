@@ -1,0 +1,11 @@
+//https://www.urionlinejudge.com.br/judge/pt/profile/347554
+#include <stdio.h>
+main (void){
+    
+    int i=1, j=60, a;
+    for(a=0;a<=12;a++){
+        printf("I=%d J=%d\n",i,j);
+        i = i + 3;
+        j = j - 5;
+    }
+}
