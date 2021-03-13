@@ -1,0 +1,23 @@
+//https://www.urionlinejudge.com.br/judge/pt/profile/347554
+#include <stdio.h>
+
+main (void){
+    int valor_x, valor_z, i=1, contador, contador2=0, recebex=0;
+    scanf("%d", &valor_x);
+    while(valor_z <= valor_x){
+        scanf("%d", &valor_z);
+    }
+    if(valor_z > valor_x){
+        recebex=valor_x;
+            for(i=i+1; i<valor_z;i++){
+                contador = recebex;
+                valor_x++;
+                contador2 = contador+valor_x;
+                recebex = contador2;
+                    if(contador2 >= valor_z){
+                        printf("%d\n", i);
+                        break;
+                    }
+            }
+    }
+}
