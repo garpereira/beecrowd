@@ -1,0 +1,29 @@
+#include <stdio.h>
+//https://www.urionlinejudge.com.br/judge/pt/profile/347554
+
+void solve(float salario, float percent){
+    float reajuste = salario*percent;
+    printf("Novo salario: %.2f\n", salario+reajuste);
+    printf("Reajuste ganho: %.2f\n", reajuste);
+    printf("Em percentual: %.0f %%\n", percent*100);
+}
+ 
+int main() {
+    float salario;
+    float a = 400.00;
+    float b = 800.00;
+    float c = 1200.00;
+    float d = 2000.00;
+    scanf("%f",&salario);
+    if(salario <= a)
+        solve(salario, 0.15);
+    else if(salario > a && salario <= b)
+        solve(salario, 0.12);
+    else if(salario > b && salario <= c)
+        solve(salario, 0.1);
+    else if(salario > c && salario <= d)
+        solve(salario, 0.07);
+    else if(salario > d)
+        solve(salario, 0.04);
+    return 0;
+}
