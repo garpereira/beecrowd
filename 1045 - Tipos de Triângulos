@@ -1,0 +1,35 @@
+//https://www.urionlinejudge.com.br/judge/pt/profile/347554
+#include <stdio.h>
+
+void solve(float vet[3]){
+    int i, aux;
+    for(i=0;i<3-1;i++){
+        if(vet[i] < vet[i+1]){
+            aux = vet[i];
+            vet[i] = vet[i+1];
+            vet[i+1] = aux;
+        }
+    }
+}
+ 
+int main() {
+    float vet[3];
+    scanf("%f %f %f", &vet[0], &vet[1], &vet[2]);
+    solve(vet);
+    solve(vet);
+    if(vet[0] >= vet[1]+vet[2]){
+        printf("NAO FORMA TRIANGULO\n");
+        return 0;
+    }
+    if(vet[0]*vet[0] == ((vet[1]*vet[1])+(vet[2]*vet[2])))
+        printf("TRIANGULO RETANGULO\n");
+    if(vet[0]*vet[0] > ((vet[1]*vet[1])+(vet[2]*vet[2])))
+        printf("TRIANGULO OBTUSANGULO\n");
+    if(vet[0]*vet[0] < ((vet[1]*vet[1])+(vet[2]*vet[2])))
+        printf("TRIANGULO ACUTANGULO\n");
+    if(vet[0] == vet[1] && vet[0] == vet[2])
+        printf("TRIANGULO EQUILATERO\n");
+    if((vet[0] == vet[1] && vet[0] != vet[2]) || (vet[0] == vet[2] && vet[0] != vet[1]) || (vet[1] == vet[2] && vet[1] != vet[0]))
+        printf("TRIANGULO ISOSCELES\n");
+    return 0;
+}
