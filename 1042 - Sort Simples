@@ -1,0 +1,29 @@
+//https://www.urionlinejudge.com.br/judge/pt/profile/347554
+#include <stdio.h>
+
+int main(){
+    int ordenado[3], numeros[3], i, j, anterior;
+    
+    for(i=0;i<3;i++){
+        scanf("%d", &ordenado[i]);
+        numeros[i] = ordenado[i];
+    }
+    for(j=0;j<3;j++){
+        for(i=0;i<3-1;i++){
+            if(ordenado[i] > ordenado[i+1]){
+                anterior = ordenado[i];
+                ordenado[i] = ordenado[i+1];
+                ordenado[i+1] = anterior;
+            }
+        }
+    }
+    
+    for(i=0;i<3;i++){
+        printf("%d\n", ordenado[i]);
+    }
+    printf("\n");
+    for(i=0;i<3;i++){
+        printf("%d\n",numeros[i]);
+    }
+    return 0;
+}
