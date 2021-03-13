@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+main(void){
+    
+    int t_duracao, horas, minutos, segundos;
+    scanf("%d", &t_duracao);
+    horas = (t_duracao/3600);
+    minutos = (t_duracao%3600)/60;
+    segundos = ((t_duracao%3600) - (minutos*60))/1;
+    printf("%d:%d:%d\n", horas, minutos, segundos);
+}
