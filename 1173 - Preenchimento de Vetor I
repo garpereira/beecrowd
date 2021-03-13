@@ -1,0 +1,17 @@
+//https://www.urionlinejudge.com.br/judge/pt/profile/347554
+#include <stdio.h>
+
+int main(){
+    int n, i, vet[10];
+    scanf("%d", &n);
+     if(n <= 50){
+        vet[0] = n;
+        for(i=0;i<10;i++){
+            if(i > 0){
+            vet[i] = vet[i-1]*2;
+            }
+        printf("N[%d] = %d\n",i, vet[i]);
+        }
+     }
+    return 0;
+}
