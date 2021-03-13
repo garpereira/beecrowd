@@ -1,0 +1,17 @@
+//https://www.urionlinejudge.com.br/judge/pt/profile/347554
+#include <stdio.h>
+main (void){
+    int n, i;
+    float divisao, x, y;
+    scanf("%d", &n);
+    for(i=0;i<n;i++){
+        scanf("%f %f", &x, &y);
+        if(y != 0){
+            divisao = x/y;
+            printf("%.1f\n", divisao);
+        }
+        else{
+            printf("divisao impossivel\n");
+        }
+    }
+}
